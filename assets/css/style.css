@@ -1,0 +1,145 @@
+body 
+	{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background: linear-gradient(to bottom right, #080817 50%, #412324 75%, #A0544B 100%)
+	}
+
+main 
+ 	{
+	flex: 1 0 auto;
+	}
+	
+.header
+	{
+	margin:0;
+	padding-top:50px;
+	background-image: url("../images/chuck1.jpg");
+	height: 300px; 
+	background-attachment: fixed;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+h1
+	{
+	line-height:150%;
+	color:white;
+	font-size:6em;
+	display:inline;
+	font-weight:bold;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	}
+
+#chuck
+	{
+	padding-left:10%;
+	font-family: 'Encode Sans Expanded', sans-serif;
+	}
+	
+#description
+	{
+	padding-left:10%;
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	font-size:1.25em;
+	}
+	
+.content
+	{
+	padding:0px !important;
+	margin:0px !important;
+	height:100%;
+	min-height:800px !important;
+	
+	}
+	
+img
+	{
+	max-height:640px !important;
+	}
+
+.left
+	{
+	float:left;
+	}
+	
+.noPad
+	{
+	padding:0px !important;
+	margin:0px !important;
+	}
+	
+.collapsible
+	{
+
+	margin: 0 10%;
+	margin-top:50px;
+	min-width:320px;
+	}
+
+.accordianHeader
+	{
+	background: linear-gradient(to right, #1c1c1c 0%, #412324 50%, #A0544B 100%);
+	font-weight:bold;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size:1.5em;
+	padding-left:40px;
+	}
+	
+.collapsible-body
+	{
+	background-color:#eee;
+	}
+
+#jokeBox
+	{
+	padding:10%;
+	}
+	
+#joke
+	{
+	background: linear-gradient(to right, #1c1c1c 0%, #412324 50%, #A0544B 100%);
+	font-weight:bold;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size:1.25em;
+	}
+
+.jokeButton
+	{
+	
+	}
+
+.empty
+	{
+	margin:0;
+	padding:0;
+	}
+
+.recentSearch
+	{
+	font-size:1.25em;
+	color:#2E302F;
+	}
+	
+.page-footer
+	{
+	background-color: #eee;
+	color: DarkGray;
+	padding-left:30px;
+	background-image: url("../images/chuck1.jpg");
+	height: 100px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	
+#footer
+	{
+	color:white;
+	}

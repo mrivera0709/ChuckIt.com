@@ -13,9 +13,9 @@
 		<title> CHUCK it </title>
 		
 <!-- === MATERIALIZE === -->
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		 
-		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 <!-- === CSS === -->
 		<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
@@ -61,15 +61,15 @@
 				<div class="col m12 content"> 
 
 <!-- ACCORDION START -->
-					<ul class="collapsible" data-collapsible="accordion">
+					<ul class="collapsible popout" data-collapsible="accordion">
 				    <li>
 
 
 <!-- ========================================================================== -->
 <!-- JOKE HEADER -->
 <!-- ========================================================================== -->
-				      <div class="collapsible-header">
-				      	<p class=accordianHeader> Choose your Chuck Wisdom... </p> 
+				      <div class="collapsible-header waves-effect">
+				      	<p class="accordianHeader"> Choose your Chuck wisdom... </p> 
 				      </div>
 
 <!-- JOKE BODY -->
@@ -95,8 +95,8 @@
 				    <li>
 				      
 <!-- IMAGE SELECTOR HEADER -->
-				    	<div class="collapsible-header">
-							<p class=accordianHeader> Choose your background ... </p> 
+				    	<div class="collapsible-header waves-effect">
+							<p class="accordianHeader"> Choose your background ... </p> 
 				    	</div>
 				      
 <!-- IMAGE SELECTOR BODY -->
@@ -106,9 +106,15 @@
 
 <!-- SEARCH BOX -->
 									<div class="row">
-										<div class="input-field col s12">
+										<div class="input-field col s6">
+
 											<input id="search" type="text" class="validate">
 											<label for="Search"> Search Imgur </label>
+											
+											<button class="btn waves-effect waves-light blue-grey darken-3" type="submit" name="action">Submit
+												<i class="material-icons right">send</i>
+											</button>
+
 										</div>
 									</div>
 
@@ -119,7 +125,7 @@
 
 <!-- IMAGE FILE AND TITLE-->
 												<div class="card-image">
-													<img src="assets/images/chuck1.jpg">
+													<img class=materialboxed src="assets/images/chuck1.jpg">
 													<span class="card-title"> Card Title </span>
 									          
 <!-- NEXT IMAGE -->
@@ -149,8 +155,8 @@
 				    <li>
 				    	
 <!-- RESULT AREA HEADER -->						    	
-						<div class="collapsible-header">
-							<p class=accordianHeader> Bask in his glory!!! </p>
+						<div class="collapsible-header waves-effect">
+							<p class="accordianHeader"> Bask in his glory!!! </p>
 						</div>
 
 <!-- RESULT AREA BODY -->				      
@@ -162,7 +168,7 @@
 
 <!-- MEME FILE AND TITLE -->							        
 										<div class="card-image">
-											<img src="assets/images/chuck1.jpg">
+											<img class=materialboxed src="assets/images/chuck1.jpg">
 											<span class="card-title">Card Title</span>	       
 										</div>
 
@@ -204,16 +210,32 @@
 		
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>    
 		
-		<script >
-			$(document).ready(function() 
-				{
-	    		$('select').material_select();
-	    		$('.carousel.carousel-slider').carousel({fullWidth: true});
-	    		Materialize.updateTextFields();
+	<script>
+		$(document).ready(function() 
+			{
+	    	$('select').material_select();
+	    	$('.carousel.carousel-slider').carousel({fullWidth: true});
+	    	Materialize.updateTextFields();
+			$('.materialboxed').materialbox();
 	    	
-				});
-		</script> 
-		
+			});
+	</script> 
+	
+	<script type="text/javascript" src="assets/javascript/app.js">
+	</script>
+
+	<script type="text/javascript" src="assets/javascript/chuck.js">
+	</script>
+
+	<script type="text/javascript" src="assets/javascript/imgur.js">
+	</script>
+
+	<script type="text/javascript" src="assets/javascript/meme.js">
+	</script>
+
+	<script type="text/javascript" src="assets/javascript/text2speech.js">
+	</script>
+
 	</body>
 </html>
 <!-- ========================================================================== -->

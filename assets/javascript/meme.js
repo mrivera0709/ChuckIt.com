@@ -2,7 +2,7 @@
 $('#').on('click', function() {
 
   //Created a variable to hold the "api" url
-  var url = "http://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/durchschnittsgesichter/m(01-32)_gr.jpg"
+  var url = "#";
   //Created a variable to hold the top text of the meme
   var text1 = '//';
   //Created a variable to hold the bottom text of the meme

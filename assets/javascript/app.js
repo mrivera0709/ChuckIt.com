@@ -10,7 +10,7 @@
 		//target and display joke text on index.html element
 		$('#').on('click' function() {
 			jokeData = chuckie();
- 		$('#').innerhtml(jokeData);
+ 		$('#').innerHTML(jokeData);
 });
 
 
@@ -29,6 +29,10 @@
 	//for the function in the meme.js file.
 		//place concatenated memeUrl into var memeUrl
 			//add memeUrl as src in <img> tag and insert html into index.html element
+			$('#').on('click', function (jokeData, memeUrl) {
+				memeUrl = memeImage();
+				$('#').innerHTML(memeUrl);
+			})
 
 /////FIREBASE INTEGRATION FOR SAVING JOKE TEXT AND COMPLETED MEMES. EACH
 /////WILL BE USED IN SEPARATE PAGES. ONE AS A LIST OF JOKES AND THE OTHER

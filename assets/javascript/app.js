@@ -10,7 +10,7 @@
 		//target and display joke text on index.html element
 		$('#').on('click' function() {
 			jokeData = chuckie();
- 		$('#').innerHTML(jokeData);
+ 		$('#joke').innerHTML(jokeData);
 });
 
 
@@ -31,7 +31,7 @@
 			//add memeUrl as src in <img> tag and insert html into index.html element
 			$('#').on('click', function (jokeData, memeUrl) {
 				memeUrl = memeImage();
-				$('#').innerHTML(memeUrl);
+				$('.card-image').innerHTML(memeUrl);
 			})
 
 /////FIREBASE INTEGRATION FOR SAVING JOKE TEXT AND COMPLETED MEMES. EACH

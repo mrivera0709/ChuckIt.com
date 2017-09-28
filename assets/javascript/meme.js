@@ -31,4 +31,4 @@ function memeImage(jokeData, memeUrl) {
   //appending the image to the location
   add.append(top);
 
-})
+}

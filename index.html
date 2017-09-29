@@ -76,7 +76,7 @@
 				      <div id=jokeBox class="collapsible-body">
 				      	
 				      	<p id=joke> 
-				      		Chuck Norris originally appeared in the "Street Fighter II" video game, but was removed by Beta Testers because every button caused him to do a roundhouse kick. When asked bout this "glitch," Norris replied, "That's no glitch."
+				      		Go ahead... click it.... you know you want too...
 				      	</p>
 				      		<br>
 
@@ -111,7 +111,7 @@
 											<input id="search" type="text" class="validate">
 											<label for="Search"> Search Imgur </label>
 											
-											<button class="btn waves-effect waves-light blue-grey darken-3" type="submit" name="action">Submit
+											<button id=imageSearch class="btn waves-effect waves-light blue-grey darken-3" type="submit" name="action">Search
 												<i class="material-icons right">send</i>
 											</button>
 
@@ -125,24 +125,33 @@
 
 <!-- IMAGE FILE AND TITLE-->
 												<div class="card-image">
-													<img class=materialboxed src="assets/images/chuck1.jpg">
-													<span class="card-title"> Card Title </span>
+													<img id=image class=materialboxed src="assets/images/chuck1.jpg">
+													<!-- <span class="card-title"> Card Title </span> -->
 									          
 <!-- NEXT IMAGE -->
-									        		<a class="right btn-floating halfway-fab waves-effect waves-light blue-grey darken-3"><i class="material-icons">arrow_forward</i></a>
+									        <a id=next class="right btn-floating halfway-fab waves-effect waves-light blue-grey darken-3"><i class="material-icons">arrow_forward</i></a>
 									          
 <!-- PREVIOUS IMAGE -->
-													<a class="left btn-floating halfway-fab waves-effect waves-light blue-grey darken-3"><i class="material-icons">arrow_back</i></a>
+													<a id=back class="left btn-floating halfway-fab waves-effect waves-light blue-grey darken-3"><i class="material-icons">arrow_back</i></a>
 												</div>
 									          
 <!-- IMAGE DETAILS -->
-												<div class="card-content">
+												<!--<div class="card-content">
 													<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+												</div>  -->
+												 
+												
+
 												</div>
-									        
-									    	</div>
+												
+													<br>
+
+												<button id=imageSearch class="btn waves-effect waves-light blue-grey darken-3" type="submit" name="action">Submit
+														<i class="material-icons right">done</i>
+													</button>
+
 										</div>
-							    	</div>
+							    </div>
 								</div>
 							</div>
 				    	</div>
@@ -152,36 +161,39 @@
 <!-- ========================================================================== -->
 <!-- GENERATED MEME -->
 <!-- ========================================================================== -->
-				    <li>
+				    <!-- <li>
 				    	
 <!-- RESULT AREA HEADER -->						    	
-						<div class="collapsible-header waves-effect">
+						<!-- <div id=memeHeader class=" collapsible-header waves-effect">
 							<p class="accordianHeader"> Bask in his glory!!! </p>
-						</div>
+						</div> -->
 
 <!-- RESULT AREA BODY -->				      
-						<div class="collapsible-body">
+						 <!-- <div class="collapsible-body"> -->
 							
 							<div class="row">
-								<div class="col s12 m12">
+								<div class="col m12">
+										
+									
 									<div class="card">
+											
 
 <!-- MEME FILE AND TITLE -->							        
 										<div class="card-image">
-											<img class=materialboxed src="assets/images/chuck1.jpg">
-											<span class="card-title">Card Title</span>	       
+											<img id=meme class=materialboxed src="assets/images/chuck1.jpg">
+											<!-- <span class="card-title">Card Title</span>	-->    
 										</div>
 
 <!-- MEME DETAILS -->
-										<div class="card-content">
-											<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-										</div>
+										<!-- <div class="card-content">
+											<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p> 
+										</div> -->
 							        
-							    	</div>
+							    </div>
 								</div>
-					   		</div>
-						</div>	
-				    </li>
+					   	</div>
+					<!--	</div>
+				    </li>	-->
 					</ul>
 				</div>		
 			</div>			
@@ -208,7 +220,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
 	</script>
 		
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+	</script>    
 		
 	<script>
 		$(document).ready(function() 

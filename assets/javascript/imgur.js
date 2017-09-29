@@ -59,10 +59,26 @@ function getImage(imageSearch){
 		//call function to update global url array variable in app.js
 		currentPic = pics[navIndex];
 		updateImageUrl(currentPic);
+
+//add the app.js onclick function that calls
+//the getImage(imageSearch) function
+//which passes the search term using the 
+//var imageSearch. 
+
+//add the app.js onclick function calls for
+//nextImage() and prevImage()
+//$("#next").on("click", function(){
+//	nextImage();
+//});
+//
+//$("#back").on("click", function(){
+//	prevImage();
+//});
+
 //add the function to app.js		
 // function updateImageUrl(currentPic) {
 // 	imageUrl = currentPic;
-// 	$('#').html(imageUrl);
+// 	$('#').attr("src",imageUrl);
 // 	//console.log(imageUrl);
 // }
 	});	

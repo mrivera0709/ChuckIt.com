@@ -8,16 +8,22 @@
 	//onclick for joke generation. From joke btn
 		//calls function from chuck.js file places response into var jokeData
 		//target and display joke text on index.html element
-		$('#').on('click' function() {
+
+		$('.material-icons').on('click', function() {
 			jokeData = chuckie();
- 		$('#').innerHTML(jokeData);
+
 });
 
+function updateJoke(quote) {
+	jokeData = quote;
+	$('#joke').html(jokeData);
+	//console.log(jokeData);
+}
 
 /////IMGUR SECTION
 	//onclick for image search. Uses imput from text field and search btn event
 		//calls function from imgur.js file places response into var imageUrl
-		imageUrl = getImage(imageSearch);
+		//imageUrl = getImage(imageSearch);
 		//target and display image in index.html crousel element. Pass in the
 		//imageSerarch value as a paramenter for the function in the imgur.js file.
 
@@ -29,10 +35,11 @@
 	//for the function in the meme.js file.
 		//place concatenated memeUrl into var memeUrl
 			//add memeUrl as src in <img> tag and insert html into index.html element
-			$('#').on('click', function (jokeData, memeUrl) {
+			('#').on('click', function (jokeData, memeUrl) {
 				memeUrl = memeImage();
-				$('#').innerHTML(memeUrl);
+				$('.card-image').innerHTML(memeUrl);
 			})
+
 
 /////FIREBASE INTEGRATION FOR SAVING JOKE TEXT AND COMPLETED MEMES. EACH
 /////WILL BE USED IN SEPARATE PAGES. ONE AS A LIST OF JOKES AND THE OTHER

@@ -17,13 +17,15 @@ function chuckie() {
     })
     .done(function(response) {
         //console.log to check and make sure it returns the url of the api
-        console.log(queryURL);
+        //console.log(queryURL);
         //console.log to check and make sure it retuns a json file
-        console.log(response.value);
+        //console.log(response.value);
         //storing the text from the response.value into the variable we created at the top
         quote = response.value;
         //call the function from the main.js file to tie it together
-        chuckie();
-      }
-    });
-};
+        $('#joke').html(jokeData);
+        //created function to talk to app.js
+        updateJoke(quote);
+
+      });
+    };

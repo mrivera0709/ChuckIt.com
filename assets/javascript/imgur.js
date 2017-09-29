@@ -2,15 +2,15 @@
 //in input field. Receives search criteria as a passed in parameter
 
 //DECLARE VARIABLES	
-			
-
-//FUNCTION THAT GETS IMAGE
-function getImage(imageSearch){
 	var pics = []; //holds the url array.
 	var currentPic = ""; //holds the current url selected
 	var navIndex = 0;
 	var obj = []; //holds the json response.
-	var count = 0; //used to limit the number of urls that will be added to the pics[].
+	var count = 0; //used to limit the number of urls that will be added to the pics[].	
+
+//FUNCTION THAT GETS IMAGE
+function getImage(imageSearch){
+	
 	var clientID = "2a41698dfba2cbf";
 	//query url concatenation
 	var queryUrl = "https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q=" + imageSearch + "&q_type=jpg&q_not=album";
@@ -60,27 +60,7 @@ function getImage(imageSearch){
 		currentPic = pics[navIndex];
 		updateImageUrl(currentPic);
 
-//add the app.js onclick function that calls
-//the getImage(imageSearch) function
-//which passes the search term using the 
-//var imageSearch. 
 
-//add the app.js onclick function calls for
-//nextImage() and prevImage()
-//$("#next").on("click", function(){
-//	nextImage();
-//});
-//
-//$("#back").on("click", function(){
-//	prevImage();
-//});
-
-//add the function to app.js		
-// function updateImageUrl(currentPic) {
-// 	imageUrl = currentPic;
-// 	$('#').attr("src",imageUrl);
-// 	//console.log(imageUrl);
-// }
 	});	
 }
 

@@ -53,7 +53,7 @@ function updateImageUrl(currentPic) {
 	//for the function in the meme.js file.
 		//place concatenated memeUrl into var memeUrl
 			//add memeUrl as src in <img> tag and insert html into index.html element
-			('#').on('click', function (jokeData, memeUrl) {
+			('#memeSubmit').on('click', function (jokeData, memeUrl) {
 				memeUrl = memeImage();
 				$('.card-image').innerHTML(memeUrl);
 			})

@@ -20,7 +20,14 @@ function chuckie() {
         quote = response.value;
         //call the function from the main.js file to tie it together
         //created function to talk to app.js
-        updateJoke(quote);
+
+        //conditional statement that confirms quote length < 181 characters
+        if (quote.length > 200) {
+          console.log('quote is too long. Will create 414 error.');
+        } else {
+          updateJoke(quote);
+        }
+        
 
       });
     };

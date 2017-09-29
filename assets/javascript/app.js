@@ -19,6 +19,7 @@ function updateJoke(quote) {
 	jokeData = quote;
 	$('#joke').html(jokeData);
 	console.log(jokeData);
+	console.log(jokeData.length);
 }
 
 /////IMGUR SECTION

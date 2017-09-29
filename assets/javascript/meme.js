@@ -25,10 +25,10 @@ function memeImage(jokeData, memeUrl) {
   //Created a variable that concats all of the information to complete the url and retrieve the meme + photo
   var photo = 'https://memegen.link/custom' + text1 + '.jpg?' + 'alt=' + memeUrl;
   //Dynamically creating an image tag to hold the meme
-  var top = $('<img src=' + photo + '>');
+  var top = $('<img src="' + photo + '">');
   //Created a variable to contain the jquery location for where the meme will be placed
   var add = $('#');
   //appending the image to the location
   add.append(top);
 
-})
+}

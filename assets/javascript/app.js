@@ -3,25 +3,50 @@
 	var imageUrl = "";
 	var memeUrl = "";
 	var imageSearch = "";
+	var newMeme = "";
 
 /////CHUCK SECTION
 	//onclick for joke generation. From joke btn
 		//calls function from chuck.js file places response into var jokeData
 		//target and display joke text on index.html element
-		$('#').on('click' function() {
-			jokeData = chuckie();
- 		$('#').innerHTML(jokeData);
+
+$('#joke-btn').on('click', function() {
+	chuckie();
+
 });
 
+function updateJoke(quote) {
+	jokeData = quote;
+	$('#joke').html(jokeData);
+	console.log(jokeData);
+}
 
 /////IMGUR SECTION
 	//onclick for image search. Uses imput from text field and search btn event
-		//calls function from imgur.js file places response into var imageUrl
-		imageUrl = getImage(imageSearch);
-		//target and display image in index.html crousel element. Pass in the
-		//imageSerarch value as a paramenter for the function in the imgur.js file.
+	// Add the app.js onclick function that calls the getImage(imageSearch) function
+	// which passes the search term using the var imageSearch.
+$('#imageSearch').on('click', function(){
+	imageSearch = $('#search').val();
+	console.log(imageSearch);
+	getImage(imageSearch);
+});
 
-		//how are we going to select the image to use????
+//Add the app.js onclick function calls for
+// nextImage() and prevImage()
+$('#next').on('click', function(){
+	nextImage();
+});
+
+$('#back').on('click', function(){
+	prevImage();
+});
+
+// add the function to app.js which passes variables between imgur.js and app.js functions		
+function updateImageUrl(currentPic) {
+	imageUrl = currentPic;
+	$('#image').attr('src',imageUrl);
+	console.log(imageUrl);
+}	
 
 /////MEME CREATOR SECTION
 	//onclick for meme generation. Uses input from jokeData for meme text and url
@@ -29,10 +54,27 @@
 	//for the function in the meme.js file.
 		//place concatenated memeUrl into var memeUrl
 			//add memeUrl as src in <img> tag and insert html into index.html element
-			$('#').on('click', function (jokeData, memeUrl) {
-				memeUrl = memeImage();
-				$('#').innerHTML(memeUrl);
-			})
+$('#memeSubmit').on('click', function() {
+	memeUrl = imageUrl;
+	memeImage(jokeData, memeUrl);
+	// $('.collapsible popout').hide();
+	
+})
+
+	//function that passes photo parameter to newMeme variable in app.js and displays meme generated on screen.
+	//also resets the following variables: jokeData, imageSearch, imageUrl, and memeUrl
+	//in preparation for next search cycle
+function displayMeme(photo) {
+	newMeme = photo
+	console.log(newMeme);
+	//modifies img src val to that of generated meme to display it in DOM
+	$('#meme').attr('src', newMeme);
+	// //variable resets
+	// jokeData = "";
+	// imageUrl = "";
+	// memeUrl = "";
+	// imageSearch = "";
+}
 
 /////FIREBASE INTEGRATION FOR SAVING JOKE TEXT AND COMPLETED MEMES. EACH
 /////WILL BE USED IN SEPARATE PAGES. ONE AS A LIST OF JOKES AND THE OTHER

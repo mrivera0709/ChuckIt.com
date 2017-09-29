@@ -23,7 +23,7 @@ function chuckie() {
         //storing the text from the response.value into the variable we created at the top
         quote = response.value;
         //call the function from the main.js file to tie it together
-        $('#joke').html(jokeData);
+        // $('#joke').html(jokeData);
         //created function to talk to app.js
         updateJoke(quote);
 

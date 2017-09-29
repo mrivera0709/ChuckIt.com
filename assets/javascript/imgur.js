@@ -70,12 +70,22 @@ function getImage(imageSearch){
 
 //FUNCTION THAT CHANGES THE <IMG> SOURCE VALUE IN THE IMAGE DISPLAY DIV +1 INDEX VAL.
 //RESETS TO INDEX TO 0 IF EXCEEDS INDEX 19.
-// function prevImage(){
-
-// }
+function nextImage(){
+	navIndex ++;
+	if (navIndex > 19){
+		navIndex = 0;
+	}
+	currentPic = pics[navIndex];
+	updateImageUrl(currentPic);
+}
 
 //FUNCTION THAT CHANGES THE <IMG> SOURCE VALUE IN THE IMAGE DISPLAY DIV -1 INDEX VAL.
 //RESETS TO INDEX TO 19 IF INDEX < 0.
-// function nextImage(){
-
-// }
+function prevImage(){
+	navIndex --;
+	if (navIndex < 0) {
+		navIndex = 19
+	}
+	currentPic = pics[navIndex];
+	updateImageUrl(currentPic);
+}

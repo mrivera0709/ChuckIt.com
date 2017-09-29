@@ -7,6 +7,8 @@
 //FUNCTION THAT GETS IMAGE
 function getImage(imageSearch){
 	var pics = []; //holds the url array.
+	var currentPic = ""; //holds the current url selected
+	var navIndex = 0;
 	var obj = []; //holds the json response.
 	var count = 0; //used to limit the number of urls that will be added to the pics[].
 	var clientID = "2a41698dfba2cbf";
@@ -55,8 +57,25 @@ function getImage(imageSearch){
 		console.log(pics);
 		console.log(count);
 		//call function to update global url array variable in app.js
+		currentPic = pics[navIndex];
+		updateImageUrl(currentPic);
+//add the function to app.js		
+// function updateImageUrl(currentPic) {
+// 	imageUrl = currentPic;
+// 	$('#').html(imageUrl);
+// 	//console.log(imageUrl);
+// }
 	});	
-
-
-	
 }
+
+//FUNCTION THAT CHANGES THE <IMG> SOURCE VALUE IN THE IMAGE DISPLAY DIV +1 INDEX VAL.
+//RESETS TO INDEX TO 0 IF EXCEEDS INDEX 19.
+// function prevImage(){
+
+// }
+
+//FUNCTION THAT CHANGES THE <IMG> SOURCE VALUE IN THE IMAGE DISPLAY DIV -1 INDEX VAL.
+//RESETS TO INDEX TO 19 IF INDEX < 0.
+// function nextImage(){
+
+// }

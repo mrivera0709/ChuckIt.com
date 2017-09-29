@@ -8,10 +8,10 @@
 	//onclick for joke generation. From joke btn
 		//calls function from chuck.js file places response into var jokeData
 		//target and display joke text on index.html element
-		$('#').on('click' function() {
+		$(document).ready function() {
 			jokeData = chuckie();
  		$('#joke').innerHTML(jokeData);
-});
+};
 
 
 /////IMGUR SECTION

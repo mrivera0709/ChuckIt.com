@@ -10,7 +10,7 @@
 		//calls function from chuck.js file places response into var jokeData
 		//target and display joke text on index.html element
 
-$('.material-icons').on('click', function() {
+$('#joke-btn').on('click', function() {
 	chuckie();
 
 });

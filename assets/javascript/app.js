@@ -22,12 +22,30 @@ function updateJoke(quote) {
 
 /////IMGUR SECTION
 	//onclick for image search. Uses imput from text field and search btn event
-		//calls function from imgur.js file places response into var imageUrl
-		//imageUrl = getImage(imageSearch);
-		//target and display image in index.html crousel element. Pass in the
-		//imageSerarch value as a paramenter for the function in the imgur.js file.
+	// Add the app.js onclick function that calls the getImage(imageSearch) function
+	// which passes the search term using the var imageSearch.
+$('#imageSearch').on('click', function(){
+	imageSearch = $('#search').val();
+	console.log(imageSearch);
+	getImage(imageSearch);
+});
 
-		//how are we going to select the image to use????
+//Add the app.js onclick function calls for
+// nextImage() and prevImage()
+$('#next').on('click', function(){
+	nextImage();
+});
+
+$('#back').on('click', function(){
+	prevImage();
+});
+
+// add the function to app.js which passes variables between imgur.js and app.js functions		
+function updateImageUrl(currentPic) {
+	imageUrl = currentPic;
+	$('#image').attr('src',imageUrl);
+	console.log(imageUrl);
+}	
 
 /////MEME CREATOR SECTION
 	//onclick for meme generation. Uses input from jokeData for meme text and url
@@ -35,7 +53,7 @@ function updateJoke(quote) {
 	//for the function in the meme.js file.
 		//place concatenated memeUrl into var memeUrl
 			//add memeUrl as src in <img> tag and insert html into index.html element
-			('#').on('click', function (jokeData, memeUrl) {
+			('#memeSubmit').on('click', function (jokeData, memeUrl) {
 				memeUrl = memeImage();
 				$('.card-image').innerHTML(memeUrl);
 			})

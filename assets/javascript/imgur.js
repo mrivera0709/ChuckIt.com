@@ -2,15 +2,15 @@
 //in input field. Receives search criteria as a passed in parameter
 
 //DECLARE VARIABLES	
-			
-
-//FUNCTION THAT GETS IMAGE
-function getImage(imageSearch){
 	var pics = []; //holds the url array.
 	var currentPic = ""; //holds the current url selected
 	var navIndex = 0;
 	var obj = []; //holds the json response.
-	var count = 0; //used to limit the number of urls that will be added to the pics[].
+	var count = 0; //used to limit the number of urls that will be added to the pics[].	
+
+//FUNCTION THAT GETS IMAGE
+function getImage(imageSearch){
+	
 	var clientID = "2a41698dfba2cbf";
 	//query url concatenation
 	var queryUrl = "https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q=" + imageSearch + "&q_type=jpg&q_not=album";
@@ -59,23 +59,29 @@ function getImage(imageSearch){
 		//call function to update global url array variable in app.js
 		currentPic = pics[navIndex];
 		updateImageUrl(currentPic);
-//add the function to app.js		
-// function updateImageUrl(currentPic) {
-// 	imageUrl = currentPic;
-// 	$('#').html(imageUrl);
-// 	//console.log(imageUrl);
-// }
+
+
 	});	
 }
 
 //FUNCTION THAT CHANGES THE <IMG> SOURCE VALUE IN THE IMAGE DISPLAY DIV +1 INDEX VAL.
 //RESETS TO INDEX TO 0 IF EXCEEDS INDEX 19.
-// function prevImage(){
-
-// }
+function nextImage(){
+	navIndex ++;
+	if (navIndex > 19){
+		navIndex = 0;
+	}
+	currentPic = pics[navIndex];
+	updateImageUrl(currentPic);
+}
 
 //FUNCTION THAT CHANGES THE <IMG> SOURCE VALUE IN THE IMAGE DISPLAY DIV -1 INDEX VAL.
 //RESETS TO INDEX TO 19 IF INDEX < 0.
-// function nextImage(){
-
-// }
+function prevImage(){
+	navIndex --;
+	if (navIndex < 0) {
+		navIndex = 19
+	}
+	currentPic = pics[navIndex];
+	updateImageUrl(currentPic);
+}

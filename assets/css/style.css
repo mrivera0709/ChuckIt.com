@@ -42,6 +42,7 @@ h1
 #description
 	{
 	padding-left:10%;
+	padding-right:10%;
 	color:white;
 	font-family: 'Raleway', sans-serif;
 	font-size:1.25em;
@@ -52,13 +53,14 @@ h1
 	padding:0px !important;
 	margin:0px !important;
 	height:100%;
-	min-height:800px !important;
+	
 	
 	}
 	
-img
+#image
 	{
 	max-height:640px !important;
+
 	}
 
 .left
@@ -74,10 +76,8 @@ img
 	
 .collapsible
 	{
-
-	margin: 0 10%;
-	margin-top:50px;
-	min-width:320px;
+	margin: 50px 10%;
+	min-width:460px;
 	}
 
 .accordianHeader
@@ -89,10 +89,23 @@ img
 	font-size:1.5em;
 	padding-left:40px;
 	}
-	
+
+.collapsible-header
+	{
+	background-image: url("../images/chuck3.jpg");
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}	
+
 .collapsible-body
 	{
-	background-color:#eee;
+		background-image: url("../images/chuck4.jpg");
+		background-attachment: fixed;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 #jokeBox
@@ -142,4 +155,71 @@ img
 #footer
 	{
 	color:white;
+	}
+
+	@media only screen and (max-width: 600px) 
+	{
+		h1
+			{
+			font-size:4em;	
+			}
+		
+		.collapsible
+			{
+			margin: 25px 5%;
+			width:90%;
+			}
+			
+		#description
+			{
+			padding-left:10%;
+			padding-right:10%;
+			font-size:1em;
+			line-height:150%;
+			}
+			
+		.header
+			{
+			padding-top:25px;
+			height: 200px; 
+			}
+		
+		.page-footer
+			{
+			padding-left:50px;
+			height: 90px; 
+
+	}
+	
+
+@media only screen and (max-width: 525px) 
+	{
+		.collapsible
+			{
+			margin: 25px 2.5%;
+			width:95%;
+			}
+			
+		#description
+			{
+			padding-left:7.5%;
+			padding-right:7.5%;
+			}
+
+	}
+
+	@media only screen and (max-width: 480px) 
+	{
+		.collapsible
+			{
+			margin: 25px 2.5%;
+			width:95%;
+			}
+			
+		#description
+			{
+			padding-left:7.5%;
+			padding-right:7.5%;
+			}
+
 	}

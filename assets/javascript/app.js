@@ -3,21 +3,22 @@
 	var imageUrl = "";
 	var memeUrl = "";
 	var imageSearch = "";
+	var newMeme = "";
 
 /////CHUCK SECTION
 	//onclick for joke generation. From joke btn
 		//calls function from chuck.js file places response into var jokeData
 		//target and display joke text on index.html element
 
-		$('.material-icons').on('click', function() {
-			jokeData = chuckie();
+$('.material-icons').on('click', function() {
+	chuckie();
 
 });
 
 function updateJoke(quote) {
 	jokeData = quote;
 	$('#joke').html(jokeData);
-	//console.log(jokeData);
+	console.log(jokeData);
 }
 
 /////IMGUR SECTION
@@ -53,11 +54,27 @@ function updateImageUrl(currentPic) {
 	//for the function in the meme.js file.
 		//place concatenated memeUrl into var memeUrl
 			//add memeUrl as src in <img> tag and insert html into index.html element
-			('#memeSubmit').on('click', function (jokeData, memeUrl) {
-				memeUrl = memeImage();
-				$('.card-image').innerHTML(memeUrl);
-			})
+$('#memeSubmit').on('click', function() {
+	memeUrl = imageUrl;
+	memeImage(jokeData, memeUrl);
+	// $('.collapsible popout').hide();
+	
+})
 
+	//function that passes photo parameter to newMeme variable in app.js and displays meme generated on screen.
+	//also resets the following variables: jokeData, imageSearch, imageUrl, and memeUrl
+	//in preparation for next search cycle
+function displayMeme(photo) {
+	newMeme = photo
+	console.log(newMeme);
+	//modifies img src val to that of generated meme to display it in DOM
+	$('#meme').attr('src', newMeme);
+	// //variable resets
+	// jokeData = "";
+	// imageUrl = "";
+	// memeUrl = "";
+	// imageSearch = "";
+}
 
 /////FIREBASE INTEGRATION FOR SAVING JOKE TEXT AND COMPLETED MEMES. EACH
 /////WILL BE USED IN SEPARATE PAGES. ONE AS A LIST OF JOKES AND THE OTHER

@@ -26,4 +26,4 @@ function chuckie() {
         chuckie();
       }
     });
-});
+};
